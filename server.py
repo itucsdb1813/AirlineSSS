@@ -18,9 +18,7 @@ def index():
     try:
         connection = dbapi2.connect(dsn)
         cursor = connection.cursor()
-        statement = """CREATE TABLE PERSON (
-            ID SERIAL PRIMARY KEY,
-            NAME VARCHAR(40) UNIQUE NOT NULL
+        statement = """DROP TABLE PERSON
         )"""
         cursor.execute(statement)
         connection.commit()
