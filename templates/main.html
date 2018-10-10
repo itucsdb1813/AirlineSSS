@@ -5,17 +5,16 @@
 	  
 	  <table border = 1>
 			<tr>
-				<th>FlightID</th>
-				<th>AirportName</th>
+				<th>Flight ID</th>
+				<th>Airport Name</th>
 				<th>City</th>
-				<th>PlaneModel</th>
+				<th>Plane Model</th>
 			</tr>
 		 {% for flight in flights %}
 			<tr>
-				<td>{{flight[0]}}</td>
-				<td>{{flight[1]}}</td>
-				<td>{{flight[2]}}</td>
-				<td>{{flight[3]}}</td>
+				{% for data in flight %}
+					<td>{{ data }}</td>
+				{% endfor %}
 			</tr>
 		 {% endfor %}
 	  </table>
