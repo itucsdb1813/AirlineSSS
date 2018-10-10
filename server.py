@@ -18,6 +18,10 @@ def index():
         connection = dbapi2.connect(dsn)
         cursor = connection.cursor()
         statement = """
+        CREATE TABLE USERS (
+        USERNAME VARCHAR(20) PRIMARY KEY,
+        PASSWORD VARCHAR(20) NOT NULL
+    )
         )"""
         cursor.execute(statement)
         connection.commit()
