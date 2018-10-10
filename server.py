@@ -14,6 +14,29 @@ dsn = """user='ddzwibxvysqwgx' password='9e0edae8756536ffdba78314ebde69e2d019e58
 
 @app.route("/")
 def index():
+    return render_template('main.html')
+
+@app.route("/flights/<int:code>/")
+def flight(code):
+    try:
+        connection = dbapi2.connect(dsn)
+        cursor = connection.cursor()
+        statement = """SELECT f."FlightID", air."AirportName", air."City", x."PlaneModel" From flights as f
+            inner join planes as x on x."PlaneID" = f."PlaneID"
+            inner join airports as air on air."AirportID" = f."DestinationID"
+            WHERE f."FlightID" = %d
+        """ % code
+        cursor.execute(statement)
+        row = cursor.fetchall()
+        return render_template('flights.html', flights = row)
+    except dbapi2.DatabaseError:
+        connection.rollback()
+        return "Hata!"
+    finally:
+        connection.close()
+
+@app.route("/flights/")
+def flights():
     try:
         connection = dbapi2.connect(dsn)
         cursor = connection.cursor()
@@ -23,12 +46,11 @@ def index():
         """
         cursor.execute(statement)
         rows = cursor.fetchall()
-        return render_template('main.html', flights = rows)
+        return render_template('flights.html', flights=rows)
     except dbapi2.DatabaseError:
         connection.rollback()
         return "Hata!"
     finally:
         connection.close()
-
 if __name__ == "__main__":
     app.run()
