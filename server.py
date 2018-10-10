@@ -26,9 +26,9 @@ def index():
         return render_template('main.html', flights = rows)
     except dbapi2.DatabaseError:
         connection.rollback()
+        return "Hata!"
     finally:
         connection.close()
-        return "Hata!"
 
 if __name__ == "__main__":
     app.run()
