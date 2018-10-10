@@ -3,6 +3,7 @@ import sys
 
 import psycopg2 as dbapi2
 
+DATABASE_URL = 'postgres://ddzwibxvysqwgx:9e0edae8756536ffdba78314ebde69e2d019e58a2c05dfbad508b5eb657ac9e7@ec2-54-247-101-205.eu-west-1.compute.amazonaws.com:5432/d8o6dthnk5anke'
 
 INIT_STATEMENTS = [
     "CREATE TABLE IF NOT EXISTS DUMMY (NUM INTEGER)",
