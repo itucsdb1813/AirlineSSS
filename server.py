@@ -11,7 +11,6 @@ app.debug = True
 
 dsn = """user='ddzwibxvysqwgx' password='9e0edae8756536ffdba78314ebde69e2d019e58a2c05dfbad508b5eb657ac9e7'
          host='ec2-54-247-101-205.eu-west-1.compute.amazonaws.com' port=5432 dbname='d8o6dthnk5anke'"""
-enes
 
 @app.route("/")
 def index():
@@ -29,7 +28,6 @@ def index():
         connection.close()
     return render_template('main.html')
 
-said
 
 if __name__ == "__main__":
     app.run()
