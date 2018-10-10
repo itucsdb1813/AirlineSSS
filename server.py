@@ -1,4 +1,6 @@
 from flask import Flask, redirect, url_for, request, render_template
+
+import psycopg2 as dbapi2
 from flask_sqlalchemy import SQLAlchemy
 
 
