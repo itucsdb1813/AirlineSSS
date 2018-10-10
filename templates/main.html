@@ -12,10 +12,10 @@
 			</tr>
 		 {% for flight in flights %}
 			<tr>
-				<td>{{flight.FlightID}}</td>
-				<td>{{flight.AirportName}}</td>
-				<td>{{flight.City}}</td>
-				<td>{{flight.PlaneModel}}</td>
+				<td>{{flight[0]}}</td>
+				<td>{{flight[1]}}</td>
+				<td>{{flight[2]}}</td>
+				<td>{{flight[3]}}</td>
 			</tr>
 		 {% endfor %}
 	  </table>
