@@ -14,22 +14,21 @@ dsn = """user='ddzwibxvysqwgx' password='9e0edae8756536ffdba78314ebde69e2d019e58
 
 @app.route("/")
 def index():
-   ## try:
+    try:
         connection = dbapi2.connect(dsn)
         cursor = connection.cursor()
         statement = """SELECT f."FlightID", air."AirportName", air."City", x."PlaneModel" From flights as f
             inner join planes as x on x."PlaneID" = f."PlaneID"
             inner join airports as air on air."AirportID" = f."DestinationID"
         """
-  ##      statement = """SELECT "FlightID" From flights"""
         cursor.execute(statement)
         rows = cursor.fetchall()
         return render_template('main.html', flights = rows)
-   ## except dbapi2.DatabaseError:
-   ##     connection.rollback()
-   ## finally:
-   ##     connection.close()
-   ##     return "Hata!"
+    except dbapi2.DatabaseError:
+        connection.rollback()
+    finally:
+        connection.close()
+        return "Hata!"
 
 if __name__ == "__main__":
     app.run()
