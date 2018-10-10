@@ -1,11 +1,23 @@
 <html>
-
-   <head>
-      <script type = "text/javascript" 
-         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
-   </head>
    
    <body>
-      Merhaba
+      Uçuş Listesi<br><br><br>
+	  
+	  <table border = 1>
+			<tr>
+				<th>FlightID</th>
+				<th>AirportName</th>
+				<th>City</th>
+				<th>PlaneModel</th>
+			</tr>
+		 {% for flight in flights %}
+			<tr>
+				<td>{{flight.FlightID}}</td>
+				<td>{{flight.AirportName}}</td>
+				<td>{{flight.City}}</td>
+				<td>{{flight.PlaneModel}}</td>
+			</tr>
+		 {% endfor %}
+	  </table>
    </body>
 </html>

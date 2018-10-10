@@ -17,20 +17,17 @@ def index():
     try:
         connection = dbapi2.connect(dsn)
         cursor = connection.cursor()
-        statement = """
-        CREATE TABLE USERS (
-        USERNAME VARCHAR(20) PRIMARY KEY,
-        PASSWORD VARCHAR(20) NOT NULL
-    )
-        )"""
+        statement = """SELECT f."FlightID", air."AirportName", air."City", x."PlaneModel" From public."Flights" as f
+            inner join public."Planes" as x on x."PlaneID" = f."PlaneID"
+            inner join public."Airports" as air on air."AirportID" = f."DestinationID"
+        """
         cursor.execute(statement)
-        connection.commit()
-        cursor.close()
+
     except dbapi2.DatabaseError:
         connection.rollback()
     finally:
         connection.close()
-    return render_template('main.html')
+    return render_template('main.html', flights = cursor)
 
 
 if __name__ == "__main__":
