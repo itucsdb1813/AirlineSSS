@@ -7,14 +7,14 @@
    
    <body>
       
-      <form action = "http://localhost:5000/main" method = "post">
+      <form action = "http://localhost:5000/post_user" method = "post">
          <p>Kullanıcı Adınız:</p>
-         <p><input type = "text" name = "nm" required/></p>
+         <p><input type = "text" name = "Username" maxlength = 20 required/></p>
          <p>Şifreniz:</p>
-         <p><input type = "text" name = "pw" required/></p>
-         <p><input type = "submit" value = "submit" /></p>
+         <p><input type = "text" name = "Password" maxlength = 20 required /></p>
+         <p><input type = "submit" value = "Kaydol" /></p>
       </form>
-      <a href= "{{ url_for('registerUser') }}"> Kaydol </a>
+      
       <input type = "button" onclick = "sayHello()" value = "Say Hello" />
    </body>
 </html>
