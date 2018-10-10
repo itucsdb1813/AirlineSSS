@@ -25,6 +25,7 @@ def index():
 
     except dbapi2.DatabaseError:
         connection.rollback()
+        return "Hata!"
     finally:
         connection.close()
     return render_template('main.html', flights = cursor)
