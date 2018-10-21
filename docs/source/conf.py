@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ITUCSDB18NN'
-copyright = '2018, ITUCSDB18NN'
-author = 'ITUCSDB18NN'
+project = 'ITUCSDB1813'
+copyright = '2018, ITUCSDB1813'
+author = 'ITUCSDB1813'
 
 # The short X.Y version
-version = ''
+version = '1.0'
 # The full version, including alpha/beta/rc tags
-release = ''
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
