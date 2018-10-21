@@ -1,0 +1,62 @@
+
+{% extends "masterpage.html" %}
+{% block head %}
+  {{ super() }}
+    <link rel="stylesheet" href="../static/styles/posts.css?version=2">
+{% endblock %}
+{% block title %} News {% endblock %}
+{% block content %}
+
+<div>
+    {% if posts %}
+        {% for post in posts %}
+            <div class="post post-container">
+                <table border="1">
+                    <tr>
+                        <td class="post post-left">
+                            <div>
+                                <table border="1">
+                                    <tr class="post profile-top">
+                                        <td>
+                                            <table border="1">
+                                                <tr>
+                                                    <td>
+                                                        <img class="profile-image" src="../static/images/usericon.png">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{{ post[1] }}</td>
+
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class="post profile-bottom">
+                                        <td>Username: {{ post[2] }}<br>User Role: {{ post[6] }}</td>
+                                    </tr>
+                            </table>
+                            </div>
+                        </td>
+                        <td class="post post-right">
+                            <div>
+                                <table border="1">
+                                    <tr class="post-content-top">
+                                        <td>{{post[3]}}</td>
+                                    </tr>
+                                    <tr class="post-content-bottom">
+                                        <td>Post ID: {{ post[0] }} Date: {{ post[4] }} Time: {{ post[5] }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No Posts!</p>
+    {% endif %}
+</div>
+
+{% endblock %}

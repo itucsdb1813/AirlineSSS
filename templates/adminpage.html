@@ -1,0 +1,14 @@
+
+{% extends "masterpage.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block title %} ADMIN PANEL {% endblock %}
+{% block content %}
+
+<p>Welcome, {{ session.Fullname }}!<br>
+    View user <a class="awhite" href="{{ url_for('adm_users') }}">list</a><br>
+    Send <a class="awhite" href="{{ url_for('adm_sendpost') }}">posts</a><br>
+</p>
+
+{% endblock %}

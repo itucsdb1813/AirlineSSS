@@ -1,0 +1,12 @@
+
+{% extends "masterpage.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block title %} {{ session.Username }} {% endblock %}
+{% block content %}
+
+<p>Welcome, {{ session.Fullname }}!<br>
+    Your balance is {{ session.Balance }} SCoins</p>
+
+{% endblock %}
