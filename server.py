@@ -10,14 +10,6 @@ app.secret_key = "secretkey123"
 dsn = """user='ddzwibxvysqwgx' password='9e0edae8756536ffdba78314ebde69e2d019e58a2c05dfbad508b5eb657ac9e7'
          host='ec2-54-247-101-205.eu-west-1.compute.amazonaws.com' port=5432 dbname='d8o6dthnk5anke'"""
 
-class User:
-    def __init__(self, uname, fname, email, balance):
-        self.username = uname
-        self.fullname = fname
-        self.email = email
-        self.balance = balance
-
-
 @app.route("/")
 def index():
     refreshUserData()
@@ -51,9 +43,9 @@ def login():
                 else:
                     return redirect(url_for('userpage'))
         return redirect(url_for('errorpage', message = 'Wrong username or password!'))
-    except dbapi2.DatabaseError:
+    except dbapi2.DatabaseError as e:
         connection.rollback()
-        return "Hata!"
+        return str(e)
     finally:
         connection.close()
 
@@ -184,25 +176,6 @@ def adm_updateuser(username):
             connection.close()
     else:
         return redirect(url_for('errorpage', message = 'You are not authorized!'))
-
-@app.route("/adm_flights")
-def adm_flights():
-    if ifAdmin():
-        try:
-            connection = dbapi2.connect(dsn)
-            cursor = connection.cursor()
-            statement = """SELECT * FROM users WHERE username <> %s
-            """
-            cursor.execute(statement, str(session['Username']))
-            rows = cursor.fetchall()
-            return render_template('adm_users.html', userlist = rows)
-        except dbapi2.DatabaseError:
-            connection.rollback()
-            return "Hata!"
-        finally:
-            connection.close()
-    else:
-        return redirect(url_for('errorpage', message = 'Not Authorized!'))
 
 @app.route('/errorpage/<message>')
 def errorpage(message):
@@ -382,6 +355,39 @@ def adm_pymreqs():
                 return str(e)
             finally:
                 connection.close()
+
+@app.route('/forgotpassword', methods=['GET', 'POST'])
+def forgotpassword():
+    refreshUserData()
+    if 'Username' in session:
+        return redirect(url_for('errorpage'), message = 'Not allowed!')
+    if request.method == 'GET':
+        return render_template('forgotpassword.html')
+    else:
+        username = request.form['username']
+        refreshUserData()
+        try:
+            connection = dbapi2.connect(dsn)
+            cursor = connection.cursor()
+            statement = """SELECT p.emailaddress, u.password FROM person AS p
+                                INNER JOIN users AS u ON u.username = p.username
+                                WHERE p.username = '%s'
+            """ % username
+            cursor.execute(statement)
+            row = cursor.fetchone()
+            if row:
+                mailsender.sendMail(row[1], row[0])
+                flash('Your password has been sent to your email address. Please check your inbox.')
+                return redirect(url_for('forgotpassword'))
+            else:
+                flash('This username is not registered to our website!')
+                return redirect(url_for('forgotpassword'))
+        except dbapi2.DatabaseError as e:
+            connection.rollback()
+            return str(e)
+        finally:
+            connection.close()
+
 
 if __name__ == "__main__":
     app.run()
