@@ -58,6 +58,56 @@ INIT_STATEMENTS = [
             )
     """,
     """
+            CREATE TABLE IF NOT EXISTS cities
+                (   city_id integer PRIMARY KEY,
+                    city character varying(20) NOT NULL
+                )
+    """,
+    """
+        CREATE TABLE IF NOT EXISTS planes
+             (   plane_id integer PRIMARY KEY,
+                plane_model character varying(30) NOT NULL,
+                bsn_capacity integer,
+                eco_capacity integer
+            )
+    """,
+    """
+        CREATE TABLE IF NOT EXISTS airports
+             (   airport_id integer PRIMARY KEY,
+                 airport_name character varying(100) NOT NULL,
+                 city_id integer NOT NULL,
+                 
+                 CONSTRAINT airports_fkey FOREIGN KEY (city_id)
+                    REFERENCES cities (city_id)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT
+                
+             )
+    """,
+    """
+        CREATE TABLE IF NOT EXISTS flights
+            (   flight_id integer PRIMARY KEY,
+                destination_id  integer NOT NULL,
+                departure_id integer NOT NULL,
+                plane_id integer NOT NULL,
+                departure_time timestamp without time zone,
+                arrival_time timestamp without time zone,
+               
+                CONSTRAINT flights_fkey FOREIGN KEY (plane_id)
+                    REFERENCES planes (plane_id)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT,
+                CONSTRAINT flights_fkey2 FOREIGN KEY (destination_id)
+                    REFERENCES airports (airport_id)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT,
+                CONSTRAINT departure_fkey FOREIGN KEY (departure_id)
+                    REFERENCES airports (airport_id)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT
+            )
+    """,
+    """
         INSERT INTO users
         SELECT 'admin', 'admin' WHERE NOT EXISTS(select * from users where username='admin')
     """,

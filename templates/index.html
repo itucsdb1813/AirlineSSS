@@ -7,7 +7,41 @@
 {% block content %}
 <div class="blockcontainer">
   <div class="blockcontainer-content">
-    Deneme
+    <p>Search flights</p>
+<form action="/searchList" method="post">
+   <table>
+        <tr>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>
+                <select name="from">
+                    {% for city in cities %}
+                     <option value="{{city[0]}}">{{city[0]}}</option>
+                    {% endfor %}
+                </select>
+             </td>
+             <td>
+                <select name="to">
+                    {% for city in cities %}
+                     <option value="{{city[0]}}">{{city[0]}}</option>
+                    {% endfor %}
+                 </select>
+              </td>
+             <td>
+                 <input type="date" name="date"
+                     value="{{ date }}"
+                     min="{{ date }}" >
+             </td>
+
+              <td>
+                  <button type="submit">SEARCH</button>
+              </td>
+        </tr>
+   </table>
+</form>
+
   </div>
 </div>
 

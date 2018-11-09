@@ -13,7 +13,23 @@ dsn = """user='ddzwibxvysqwgx' password='9e0edae8756536ffdba78314ebde69e2d019e58
 @app.route("/")
 def index():
     refreshUserData()
-    return render_template('index.html')
+    _Datetime = datetime.datetime.now()
+    date = _Datetime.strftime("%Y-%m-%d")
+    try:
+        connection = dbapi2.connect(dsn)
+        cursor = connection.cursor()
+        statement = """SELECT city FROM cities
+                            ORDER BY city
+                        """
+        cursor.execute(statement)
+        rows = cursor.fetchall()
+
+        return render_template('index.html', cities=rows, date=date)
+    except dbapi2.DatabaseError as e:
+        connection.rollback()
+        return str(e)
+    finally:
+        connection.close()
 
 @app.route("/login", methods = ['POST'])
 def login():
@@ -387,6 +403,77 @@ def forgotpassword():
             return str(e)
         finally:
             connection.close()
+@app.route('/searchList', methods=['GET', 'POST'])
+def searchList():
+    departure = request.form['from']
+    destination = request.form['to']
+    departure_time = request.form['date']
+    try:
+        connection = dbapi2.connect(dsn)
+        cursor = connection.cursor()
+        statement = """SELECT f.flight_id,a.airport_name, c.city, a2.airport_name, c2.city, p.plane_model, f.departure_time, f.arrival_time FROM flights AS f 
+                                    INNER JOIN airports AS a ON f.departure_id = a.airport_id
+                                    INNER JOIN airports AS a2 ON f.destination_id = a2.airport_id
+                                    INNER JOIN planes AS p ON f.plane_id = p.plane_id
+                                    INNER JOIN cities AS c ON a.city_id = c.city_id
+                                    INNER JOIN cities AS c2 ON a2.city_id = c2.city_id
+                                    WHERE c.city = %s AND c2.city = %s AND f.departure_time::text LIKE %s"""
+        departure_time += '%'
+        cursor.execute(statement, (departure, destination, departure_time))
+        rows = cursor.fetchall()
+
+        return render_template('flights.html', flights=rows)
+    except dbapi2.DatabaseError as e:
+        connection.rollback()
+        return str(e)
+    finally:
+        connection.close()
+
+@app.route("/flights")
+def flights():
+
+        try:
+            connection = dbapi2.connect(dsn)
+            cursor = connection.cursor()
+            statement = """SELECT f.flight_id,a.airport_name, c.city, a2.airport_name, c2.city, p.plane_model, f.departure_time, f.arrival_time FROM flights AS f 
+                            INNER JOIN airports AS a ON f.departure_id = a.airport_id
+                            INNER JOIN airports AS a2 ON f.destination_id = a2.airport_id
+                            INNER JOIN planes AS p ON f.plane_id = p.plane_id
+                            INNER JOIN cities AS c ON a.city_id = c.city_id
+                            INNER JOIN cities AS c2 ON a2.city_id = c2.city_id
+                        """
+            cursor.execute(statement)
+            rows = cursor.fetchall()
+
+            return render_template('flights.html', flights=rows)
+        except dbapi2.DatabaseError as e:
+            connection.rollback()
+            return str(e)
+        finally:
+            connection.close()
+
+@app.route('/adm_updateflight/<flight_id>', methods = ['GET', 'POST'])
+def adm_updateflight():
+    if ifAdmin():
+        if request.method == 'POST' :
+            try:
+                connection = dbapi2.connect(dsn)
+                cursor = connection.cursor()
+                statement = """UPDATE flights SET
+                """
+                cursor.execute(statement)
+                rows = cursor.fetchall()
+                return render_template('adm_updateflight.html', flight=rows)
+            except dbapi2.DatabaseError:
+                connection.rollback()
+                return "Hata!"
+            finally:
+                connection.close()
+        else:
+            return render_template('adm_updateflight.html')
+
+    else:
+        return redirect(url_for('errorpage', message = 'Not Authorized!'))
 
 
 if __name__ == "__main__":

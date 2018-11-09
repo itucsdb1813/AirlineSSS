@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en">
+
     <head>
+
             {% block head %}
-            <link rel="stylesheet" href="../static/styles/styles.css?version=4">
+            <link rel="stylesheet" href="../static/styles/styles.css?version=6">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
             <link rel="icon" href="../static/images/favicon.ico" sizes="any" type="image/png">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <meta  charset="UTF-8">
+            <meta charset="UTF-8">
             <title>{% block title %}{% endblock %} - AirlineSSS</title>
             {% endblock %}
     </head>
@@ -16,6 +18,7 @@
         <div class="topnav" id="myTopnav">
             <a href="{{ url_for('index') }}" class="active">Home</a>
             <a href="{{ url_for('news') }}">News</a>
+            <a href="{{ url_for('flights') }}">Flights</a>
             <a href="{{ url_for('about') }}">About</a>
             {% if 'online' in session %}
                 {% if session.Role == 'A' %}
@@ -29,7 +32,7 @@
                 <a href="#login" onclick="document.getElementById('login_popup').style.display='block'" class="loginbutton" style="width:auto;">Login</a>
                 <a href="#register" onclick="document.getElementById('register_popup').style.display='block'" class="registerbutton" style="width:auto;">Register</a>
             {% endif %}
-            <label name="rate">1 SCoin = &#8378;2.76</label>
+            <label name="rate">1 SCoin = 0.9 &#8378;</label>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa           fa-bars"></i>
             </a>
@@ -56,7 +59,7 @@
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                  <span class="psw">Forgot <a href="#">password?</a></span>
+                  <span class="psw">Forgot <a href="{{ url_for('forgotpassword') }}">password?</a></span>
                 </div>
             </form>
         </div>
