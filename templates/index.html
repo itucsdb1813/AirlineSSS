@@ -1,48 +1,212 @@
-
 {% extends "masterpage.html" %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block title %} Home {% endblock %}
-{% block content %}
-<div class="blockcontainer">
-  <div class="blockcontainer-content">
-    <p>Search flights</p>
-<form action="/searchList" method="post">
-   <table>
-        <tr>
-            <th>From</th>
-            <th>To</th>
-        </tr>
-        <tr>
-            <td>
-                <select name="from">
-                    {% for city in cities %}
-                     <option value="{{city[0]}}">{{city[0]}}</option>
-                    {% endfor %}
-                </select>
-             </td>
-             <td>
-                <select name="to">
-                    {% for city in cities %}
-                     <option value="{{city[0]}}">{{city[0]}}</option>
-                    {% endfor %}
-                 </select>
-              </td>
-             <td>
-                 <input type="date" name="date"
-                     value="{{ date }}"
-                     min="{{ date }}" >
-             </td>
 
-              <td>
-                  <button type="submit">SEARCH</button>
-              </td>
-        </tr>
-   </table>
-</form>
 
-  </div>
-</div>
+	{% block content %}
+	<!-- ***** Welcome Area Start ***** -->
+	<section id="welcome" class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(../static/img/bg-img/airport2.jpg);">
+		<div class="container h-100">
+			<div class="row h-100 align-items-center justify-content-center">
+				<div class="col-12 col-md-10">
+					<div class="hero-content">
+						<h2>Find your ticket</h2>
+						<h4>For the best flight experience</h4>
+					</div>
+					<!-- Hero Search Form -->
+					<div class="hero-search-form">
+						<!-- Tabs -->
+						<div class="nav nav-tabs" id="heroTab" role="tablist">
+							<a class="nav-item nav-link active" id="nav-place-tab" data-toggle="tab" href="#nav-place" role="tab" aria-controls="nav-place" aria-selected="true">Oneway</a>
+							<a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Round</a>
+						</div>
+						<!-- Tabs Content -->
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-place" role="tabpanel" aria-labelledby="nav-place-tab">
+								<h6>What are you looking for?</h6>
+								<form action="/searchList" method="post">
+									<select class="custom-select" name="from">
+										<option selected>Istanbul (Any)</option>
+										{% for city in cities %}
+											<option value="{{city[0]}}">{{city[0]}}</option>
+										{% endfor %}
+									</select>
+									<select class="custom-select" name="to">
+										<option selected>All Destinations</option>
+										{% for city in cities %}
+											<option value="{{city[0]}}">{{city[0]}}</option>
+										{% endfor %}
+									</select> 
+									
+									<input type="date" class="custom-date" name="date" value="{{ date }}" min="{{ date }}" >
+									
+									<button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
+								</form>
+							</div>
 
-{% endblock %}
+							<div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+								<h6>What are you looking for?</h6>
+								<form action="/roundFlight" method="post">
+									<div class="container-fluid">
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<select class="custom-select form-control" name="from">
+														<option selected>Istanbul (Any)</option>
+														{% for city in cities %}
+															<option value="{{city[0]}}">{{city[0]}}</option>
+														{% endfor %}
+													</select>
+												</div>
+												<div class="col-md-6">
+													<input type="date" class="custom-date form-control" name="date" value="{{ date }}" min="{{ date }}" >
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-6">
+
+													<select class="custom-select form-control" name="to">
+														<option selected>All Destinations</option>
+														{% for city in cities %}
+															<option value="{{city[0]}}">{{city[0]}}</option>
+														{% endfor %}
+													</select>
+
+												</div>
+												<div class="col-md-6">
+													<input type="date" class="custom-date form-control" name="date2" value="{{ date }}" min="{{ date }}" >
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			{{ super() }}
+	</section>
+	<!-- ***** Welcome Area End ***** -->
+
+	<!-- ***** About Area Start ***** -->
+	<section class="dorne-about-area section-padding-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="about-content text-center">
+						<h2>Discover your country with <br><span>AirlineSSS</span></h2>
+						<p>1<sup>st</sup> Airline Company of 2017.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** About Area End ***** -->
+
+	<!-- ***** Features Destinations Area Start ***** -->
+	<section id="editorpick" class="dorne-features-destinations-area dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(../static/img/bg-img/hero-2.jpg)">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="section-heading text-center">
+						<span></span>
+						<h4>Flights on sale</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-12">
+					<div class="features-slides owl-carousel">
+						<!-- Single Features Area -->
+						{% if discount %}
+							{% for disc in discount %}
+						<div class="single-features-area" onclick="window.location = '/buy_ticket/{{ disc[1] }}'">
+							<a href = "/buy_ticket/{{ disc[1] }}">
+							<img src="../static/img/bg-img/iconn.gif" alt="">
+							<!-- Price -->
+							<div class="price-start">
+								<p>{{ (1-disc[0])*100 }}%</p>
+							</div>
+							<div class="feature-content d-flex align-items-center justify-content-between">
+								<div class="feature-title">
+									<h5>{{ disc[2] }} - {{ disc[3] }}</h5>
+									<p>Flight id: {{ disc[1] }}</p>
+
+								</div>
+								<div class="feature-favourite">
+									<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							</a>
+						</div>
+
+
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Features Destinations Area End ***** -->
+
+	<!-- ***** Features Events Area Start ***** -->
+	<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(../static/img/bg-img/hero-3.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section-heading text-center">
+						<span></span>
+						<h4>Featured events</h4>
+						<p>Editor’s pick</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				{% if posts %}
+					{% for post in posts %}
+						<div class="col-12 col-lg-6">
+							<div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.{{ 2 * loop.index }}s">
+								<div class="feature-events-thumb">
+									<img src="data:image/jpg;base64,{{ images[post[0]] }}" alt="{{ post[6] }}">
+									<div class="date-map-area d-flex">
+										<a href="#">{{ post[3] }}</a>
+									</div>
+								</div>
+								<div class="feature-events-content">
+									<h5>{{ post[4] }}</h5>
+									<h6>{{ post[1] }}</h6>
+									{% if post[2]|length > 70 %}
+										<p>{{ post[2][0:70] }}...</p>
+									{% else %}
+										<p>{{ post[2] }}</p>
+									{% endif %}
+								</div>
+								<div class="feature-events-details-btn">
+									<a href="/news#{{ post[0] }}">{{ post[0] }}</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
+
+			</div>
+		</div>
+	</section>
+	{% endblock %}

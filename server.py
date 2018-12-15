@@ -15,6 +15,7 @@ def create_app():
     app = Flask(__name__)
 
     #General Definitions
+    app.add_url_rule("/", view_func=general.index) #Sercan
     app.add_url_rule("/errorpage/<message>", view_func=general.errorpage) #Enes
     app.add_url_rule("/about", view_func=general.about) #Enes
     app.add_url_rule("/news", view_func=general.news) #Enes
@@ -22,12 +23,21 @@ def create_app():
     #Admin Definitions
     app.add_url_rule("/adm_sendpost", view_func=admin.adm_sendpost, methods = ['GET', 'POST']) #Enes
     app.add_url_rule("/adm_pymreqs", view_func=admin.adm_pymreqs, methods = ['GET', 'POST']) #Enes
+    app.add_url_rule("/adm_updateflight", view_func=admin.adm_updateflight, methods = ['GET', 'POST'])#Sercan
+    app.add_url_rule("/adm_deleteflight", view_func=admin.adm_deleteflight, methods=['GET', 'POST'])#Sercan
     app.add_url_rule("/deleteuser/<username>", view_func=admin.deleteuser, methods = ['POST']) #Enes
     app.add_url_rule("/adm_updateuser/<username>", view_func=admin.adm_updateuser, methods = ['POST']) #Enes
     app.add_url_rule("/adm_users/<username>", view_func=admin.updateuser) #Enes
     app.add_url_rule("/adminpage", view_func=admin.adminpage) #Enes
     app.add_url_rule("/adm_users", view_func=admin.adm_users) #Enes
     app.add_url_rule("/adm_fabrika_ayarlari", view_func=admin.adm_fabrika_ayarlari) #Enes
+
+    # Flights Definitions
+    app.add_url_rule("/flights", view_func=flights.flights)  # Sercan
+    app.add_url_rule("/searchList", view_func=flights.searchList, methods=['GET', 'POST'])  # Sercan
+    app.add_url_rule("/roundFlight", view_func=flights.roundFlight, methods=['GET', 'POST'])  # Sercan
+    app.add_url_rule("/addPlane", view_func=flights.addPlane, methods=['GET', 'POST'])  # Sercan
+    app.add_url_rule("/discount", view_func=flights.discount, methods=['GET', 'POST'])  # Sercan
 
     #User Definitons
     app.add_url_rule("/login", view_func=user.login, methods = ['POST']) #Enes

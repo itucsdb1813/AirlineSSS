@@ -236,3 +236,110 @@ def adm_fabrika_ayarlari():
 
     else:
         return redirect(url_for('errorpage', message='Not Authorized!'))
+
+#Sercan
+def adm_updateflight():
+    refreshUserData()
+    if ifAdmin():
+        if request.method == 'GET' :
+            try:
+                connection = dbapi2.connect(dsn)
+                cursor = connection.cursor()
+                statement = """ SELECT airport_name, city, airport_id FROM airports AS a
+                INNER JOIN cities AS c ON a.city_id = c.city_id
+                                    ORDER BY city
+                """
+                cursor.execute(statement)
+                rows = cursor.fetchall()
+                statement = """ SELECT plane_id, plane_model, bsn_capacity, eco_capacity FROM planes AS p
+                                ORDER BY plane_id
+                """
+                cursor.execute(statement)
+                plane = cursor.fetchall()
+                return RenderTemplate('adm_updateflight.html', cities=rows, planes=plane, adminActive='active')
+            except dbapi2.DatabaseError:
+                connection.rollback()
+                return "Hata1!"
+            finally:
+                connection.close()
+        else :
+            try:
+                _from = request.form['from']
+                _to = request.form['to']
+                _on = request.form['on']
+                _arr_date = request.form['arr_date']
+                _dep_date = request.form['dep_date']
+                connection = dbapi2.connect(dsn)
+                cursor = connection.cursor()
+                statement = """ INSERT INTO flights (destination_id, plane_id, departure_time, arrival_time, departure_id)
+                                            VALUES (%s, %s,%s,%s,%s)
+                                    """
+                cursor.execute(statement, (_to, _on, _dep_date, _arr_date, _from))
+                connection.commit()
+                statement = """ SELECT MAX(flight_id) FROM flights
+                                                    """
+                cursor.execute(statement)
+                flight = cursor.fetchone()
+                create_tickets(flight, 100)
+                return RenderTemplate('adm_updateflight.html', adminActive='active')
+            except dbapi2.DatabaseError:
+                connection.rollback()
+                return "Hata2!"
+            finally:
+                connection.close()
+
+
+    else:
+        return redirect(url_for('errorpage', message = 'Not Authorized!'))
+
+#Sercan
+def adm_deleteflight():
+    if ifAdmin():
+        refreshUserData()
+        if request.method == 'GET':
+            try:
+                connection = dbapi2.connect(dsn)
+                cursor = connection.cursor()
+                statement = """SELECT f.flight_id,a.airport_name, c.city, a2.airport_name,
+                                        c2.city, f.departure_time, f.arrival_time 
+                                    FROM flights AS f
+                                            INNER JOIN airports AS a ON f.departure_id = a.airport_id
+                                            INNER JOIN airports AS a2 ON f.destination_id = a2.airport_id
+                                            INNER JOIN planes AS p ON f.plane_id = p.plane_id
+                                            INNER JOIN cities AS c ON a.city_id = c.city_id
+                                            INNER JOIN cities AS c2 ON a2.city_id = c2.city_id
+                                        """
+                cursor.execute(statement)
+                rows = cursor.fetchall()
+
+                return RenderTemplate('adm_deleteflight.html', flights=rows, flightsActive='active')
+            except dbapi2.DatabaseError as e:
+                connection.rollback()
+                return str(e)
+            finally:
+                connection.close()
+        else:
+            try:
+                _id = request.form['id']
+
+                connection = dbapi2.connect(dsn)
+                cursor = connection.cursor()
+                statement = """ DELETE FROM tickets  
+                                    WHERE flight_id = %s
+                                    """ % _id
+                cursor.execute(statement)
+                connection.commit()
+                statement = """ DELETE FROM flights 
+                                        WHERE flight_id = %s
+                                """ % _id
+                cursor.execute(statement)
+                connection.commit()
+                flash('You have successfully deleted a flight.')
+                return redirect(url_for('flights'))
+            except dbapi2.DatabaseError as e:
+                connection.rollback()
+                return str(e)
+            finally:
+                connection.close()
+    else:
+        return redirect(url_for('errorpage', message = 'Not Authorized!'))

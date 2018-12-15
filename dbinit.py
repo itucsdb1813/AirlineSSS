@@ -70,6 +70,7 @@ INIT_STATEMENTS = [
                 data bytea NOT NULL
             )
     """,
+    ##-------------------SERCAN--------------------##
     """
             CREATE TABLE IF NOT EXISTS cities
                 (   city_id integer PRIMARY KEY,
@@ -99,7 +100,7 @@ INIT_STATEMENTS = [
     """,
     """
         CREATE TABLE IF NOT EXISTS flights
-            (   flight_id integer PRIMARY KEY,
+            (   flight_id SERIAL PRIMARY KEY,
                 destination_id  integer NOT NULL,
                 departure_id integer NOT NULL,
                 plane_id integer NOT NULL,
