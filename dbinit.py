@@ -28,6 +28,23 @@ INIT_STATEMENTS = [
             )
     """,
     """
+        CREATE TABLE IF NOT EXISTS payments
+            (   paymentid SERIAL PRIMARY KEY,
+                username character varying(20) NOT NULL,
+                amount numeric(7,2) NOT NULL,
+                approved char NOT NULL DEFAULT '0',
+                approved_by character varying(20),
+                CONSTRAINT payments_fkey FOREIGN KEY (username)
+                    REFERENCES users (username)
+                    ON UPDATE CASCADE
+                    ON DELETE CASCADE,
+                CONSTRAINT payments_fkey2 FOREIGN KEY (approved_by)
+                    REFERENCES users (username)
+                    ON UPDATE CASCADE
+                    ON DELETE NO ACTION
+            )
+    """,
+    """
         CREATE TABLE IF NOT EXISTS uploads
             (   id SERIAL PRIMARY KEY,
                 filename character varying(100) NOT NULL,
@@ -53,23 +70,6 @@ INIT_STATEMENTS = [
                     ON DELETE RESTRICT
             )
     """,
-    """
-        CREATE TABLE IF NOT EXISTS payments
-            (   paymentid SERIAL PRIMARY KEY,
-                username character varying(20) NOT NULL,
-                amount numeric(7,2) NOT NULL,
-                approved char NOT NULL DEFAULT '0',
-                approved_by character varying(20),
-                CONSTRAINT payments_fkey FOREIGN KEY (username)
-                    REFERENCES users (username)
-                    ON UPDATE CASCADE
-                    ON DELETE CASCADE,
-                CONSTRAINT payments_fkey2 FOREIGN KEY (approved_by)
-                    REFERENCES users (username)
-                    ON UPDATE CASCADE
-                    ON DELETE NO ACTION
-            )
-    """,
     ##-------------------SERCAN--------------------##
     """
             CREATE TABLE IF NOT EXISTS cities
@@ -90,12 +90,12 @@ INIT_STATEMENTS = [
              (   airport_id integer PRIMARY KEY,
                  airport_name character varying(100) NOT NULL,
                  city_id integer NOT NULL,
-                 
+
                  CONSTRAINT airports_fkey FOREIGN KEY (city_id)
                     REFERENCES cities (city_id)
                     ON UPDATE CASCADE
                     ON DELETE RESTRICT
-                
+
              )
     """,
     """
@@ -106,7 +106,7 @@ INIT_STATEMENTS = [
                 plane_id integer NOT NULL,
                 departure_time timestamp without time zone,
                 arrival_time timestamp without time zone,
-               
+
                 CONSTRAINT flights_fkey FOREIGN KEY (plane_id)
                     REFERENCES planes (plane_id)
                     ON UPDATE CASCADE
@@ -121,6 +121,7 @@ INIT_STATEMENTS = [
                     ON DELETE RESTRICT
             )
     """,
+    ##-------------------SAID----------------------##
     """
         CREATE TABLE IF NOT EXISTS tickets
             (   
@@ -133,7 +134,7 @@ INIT_STATEMENTS = [
                 rate numeric (3,2) NOT NULL DEFAULT 1,
                 base_price numeric (7,2) NOT NULL,
                 CONSTRAINT tickets_pkey PRIMARY KEY (flight_id, ticket_id),
-                
+
                 CONSTRAINT flight_id FOREIGN KEY (flight_id)
                 REFERENCES flights (flight_id)
                 ON UPDATE CASCADE
@@ -144,10 +145,10 @@ INIT_STATEMENTS = [
                 ON DELETE SET NULL
             )
     """,
-"""
-        INSERT INTO users
-        SELECT 'admin', 'admin' WHERE NOT EXISTS(select * from users where username='admin')
-    """,
+    """
+            INSERT INTO users
+            SELECT 'admin', 'admin' WHERE NOT EXISTS(select * from users where username='admin')
+        """,
     """
         INSERT INTO person
         SELECT 'admin','Administrator', 'admin@airlinesss.com', 'A' WHERE NOT EXISTS(select * from person where username='admin')
