@@ -124,23 +124,27 @@ INIT_STATEMENTS = [
     """
         CREATE TABLE IF NOT EXISTS tickets
             (   
-                flight_id integer NOT NULL PRIMARY KEY,
-                ticket_id integer NOT NULL PRIMARY KEY,
+                flight_id integer,
+                ticket_id integer,
                 username character varying(20),
                 price numeric(7,2) NOT NULL,
                 class character varying(1) NOT NULL,
                 seat_number character varying(3),
+                rate numeric (3,2) NOT NULL DEFAULT 1,
+                base_price numeric (7,2) NOT NULL,
+                CONSTRAINT tickets_pkey PRIMARY KEY (flight_id, ticket_id),
+                
                 CONSTRAINT flight_id FOREIGN KEY (flight_id)
-                    REFERENCES flights (flight_id)
-                    ON UPDATE CASCADE
-                    ON DELETE CASCADE,
-                CONSTRAINT username FOREIGN KEY (username)
-                    REFERENCES person (username)
-                    ON UPDATE CASCADE
-                    ON DELETE SET NULL
+                REFERENCES flights (flight_id)
+                ON UPDATE CASCADE
+                ON DELETE CASCADE,
+            CONSTRAINT username FOREIGN KEY (username)
+                REFERENCES person (username)
+                ON UPDATE CASCADE
+                ON DELETE SET NULL
             )
     """,
-    """
+"""
         INSERT INTO users
         SELECT 'admin', 'admin' WHERE NOT EXISTS(select * from users where username='admin')
     """,

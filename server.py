@@ -1,8 +1,8 @@
 from flask import Flask
 import admin
-#import flights
+import flights
 import general
-#import tickets
+import tickets
 import user
 
 app = Flask(__name__)
@@ -38,6 +38,11 @@ def create_app():
     app.add_url_rule("/roundFlight", view_func=flights.roundFlight, methods=['GET', 'POST'])  # Sercan
     app.add_url_rule("/addPlane", view_func=flights.addPlane, methods=['GET', 'POST'])  # Sercan
     app.add_url_rule("/discount", view_func=flights.discount, methods=['GET', 'POST'])  # Sercan
+
+    # Tickets Definitions
+    app.add_url_rule("/tickets", view_func=tickets.view_tickets)  # Said
+    app.add_url_rule("/buy_ticket/<int:flight_id>", view_func=tickets.buy_ticket, methods=['GET', 'POST'])  # Said
+    app.add_url_rule("/check_in", view_func=tickets.check_in, methods=['GET', 'POST'])  # Said
 
     #User Definitons
     app.add_url_rule("/login", view_func=user.login, methods = ['POST']) #Enes

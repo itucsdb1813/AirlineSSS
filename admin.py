@@ -1,7 +1,7 @@
 import psycopg2 as dbapi2
 from flask import redirect, url_for, request, session, flash
 from general import RenderTemplate, refreshUserData, ifAdmin
-#from tickets import create_tickets
+from tickets import create_tickets
 from forms import formSendPost
 from werkzeug.utils import secure_filename
 import datetime
