@@ -43,7 +43,7 @@
                 </form>
             </td>
             <td>
-                <form action="/adm_updateuser/{{ user[0] }}" method="post">
+                <form action="{{ url_for('adm_updateuser', username=user[0]) }}" method="post">
                     <table>
                         <tr>
                             <td>
