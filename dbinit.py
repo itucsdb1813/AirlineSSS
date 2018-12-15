@@ -7,13 +7,6 @@ DATABASE_URL = 'postgres://ddzwibxvysqwgx:9e0edae8756536ffdba78314ebde69e2d019e5
 
 INIT_STATEMENTS = [
     """
-        CREATE TABLE IF NOT EXISTS users
-            (
-                username character varying(20) PRIMARY KEY,
-                password character varying(50) NOT NULL
-            )
-    """,
-    """
         CREATE TABLE IF NOT EXISTS person
             (
                 username character varying(20) PRIMARY KEY,
@@ -28,16 +21,29 @@ INIT_STATEMENTS = [
             )
     """,
     """
+        CREATE TABLE IF NOT EXISTS users
+            (
+                username character varying(20) PRIMARY KEY,
+                password character varying(50) NOT NULL
+            )
+    """,
+    """
         CREATE TABLE IF NOT EXISTS posts
             (   postid SERIAL PRIMARY KEY,
                 poster character varying(20) NOT NULL,
                 content character varying(400) NOT NULL,
                 date date,
                 "time" time without time zone,
+                title character varying(50) NOT NULL,
+                image integer NOT NULL,
                 CONSTRAINT posts_fkey FOREIGN KEY (poster)
                     REFERENCES users (username)
                     ON UPDATE CASCADE
-                    ON DELETE CASCADE
+                    ON DELETE CASCADE,
+                CONSTRAINT posts_fkey2 FOREIGN KEY (image)
+                    REFERENCES uploads (id)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT
             )
     """,
     """
@@ -55,6 +61,13 @@ INIT_STATEMENTS = [
                     REFERENCES users (username)
                     ON UPDATE CASCADE
                     ON DELETE NO ACTION
+            )
+    """,
+    """
+        CREATE TABLE IF NOT EXISTS uploads
+            (   id SERIAL PRIMARY KEY,
+                filename character varying(100) NOT NULL,
+                data bytea NOT NULL
             )
     """,
     """
