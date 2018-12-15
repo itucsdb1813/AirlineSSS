@@ -7,6 +7,13 @@ DATABASE_URL = 'postgres://ddzwibxvysqwgx:9e0edae8756536ffdba78314ebde69e2d019e5
 
 INIT_STATEMENTS = [
     """
+        CREATE TABLE IF NOT EXISTS users
+            (
+                username character varying(20) PRIMARY KEY,
+                password character varying(50) NOT NULL
+            )
+    """,
+    """
         CREATE TABLE IF NOT EXISTS person
             (
                 username character varying(20) PRIMARY KEY,
@@ -21,10 +28,10 @@ INIT_STATEMENTS = [
             )
     """,
     """
-        CREATE TABLE IF NOT EXISTS users
-            (
-                username character varying(20) PRIMARY KEY,
-                password character varying(50) NOT NULL
+        CREATE TABLE IF NOT EXISTS uploads
+            (   id SERIAL PRIMARY KEY,
+                filename character varying(100) NOT NULL,
+                data bytea NOT NULL
             )
     """,
     """
@@ -61,13 +68,6 @@ INIT_STATEMENTS = [
                     REFERENCES users (username)
                     ON UPDATE CASCADE
                     ON DELETE NO ACTION
-            )
-    """,
-    """
-        CREATE TABLE IF NOT EXISTS uploads
-            (   id SERIAL PRIMARY KEY,
-                filename character varying(100) NOT NULL,
-                data bytea NOT NULL
             )
     """,
     ##-------------------SERCAN--------------------##
