@@ -12,7 +12,7 @@ A - Fields of Tickets Table
 	===========	=========	=======================	===========	================
 	FLIGHT_ID	INTEGER		ID of flight		X		FLIGHTS - FLIGHT_ID
 	TICKET_ID	INTEGER		ID of ticket		X	
-	USERNAME	VARCHAR		Owner of the ticket			USERS
+	USERNAME	VARCHAR		Owner of the ticket			USERS - USERNAME
 	PRICE		NUMERIC		Price after discount		 			
 	CLASS		CHARACTER	Economy-Business class		 			
 	SEAT_NUMBER	INTEGER		Seat number of ticket			
