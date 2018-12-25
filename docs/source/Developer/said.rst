@@ -39,8 +39,8 @@ Fields of Cities Table
 ===========	=========	=======================	===========	================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
 ===========	=========	=======================	===========	================
-CITY_ID	INTEGER		ID of city		X		
-CITY	INTEGER		City			
+CITY_ID		INTEGER		ID of city		X		
+CITY		INTEGER		City			
 ===========	=========  	=======================	===========	================
 
 	
