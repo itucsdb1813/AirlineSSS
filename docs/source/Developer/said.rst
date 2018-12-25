@@ -29,3 +29,26 @@ TICKETS TABLE CREATE CODE
    :caption: Tickets Table
    :name: Tickets
    :lines: 126-146
+
+Cities Table
+--------------
+
+Fields of Cities Table
+^^^^^^^^^^^^^^^^^^^^^^^^
+	
+===========	=========	=======================	===========	================
+FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
+===========	=========	=======================	===========	================
+CITY_ID	INTEGER		ID of city		X		
+CITY	INTEGER		City			
+===========	=========  	=======================	===========	================
+
+	
+Cities Table Create Statement
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. literalinclude:: /../../dbinit.py
+   :language: sql
+   :linenos:
+   :caption: Cities Table
+   :name: Cities
+   :lines: 75-78
