@@ -24,7 +24,7 @@ BASE_PRICE	NUMERIC		Price without discount
 TICKETS TABLE CREATE CODE
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
-   :language: python
+   :language: sql
    :linenos:
    :caption: Tickets Table
    :name: Tickets
