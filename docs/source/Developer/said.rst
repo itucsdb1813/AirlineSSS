@@ -5,7 +5,7 @@ Parts Implemented by Muhammed Said Dikici
 --------------
 
 A - Fields of Tickets Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
 	===========	=========	=======================	===========	================
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -22,7 +22,7 @@ A - Fields of Tickets Table
 
 		
 B - Tickets Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	.. literalinclude:: /../../dbinit.py
 	   :language: sql
 	   :linenos:
@@ -34,7 +34,7 @@ B - Tickets Table Create Statement
 --------------
 
 A - Fields of Cities Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 	===========	=========	=======================	===========	================
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -45,7 +45,7 @@ A - Fields of Cities Table
 
 	
 B - Cities Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	.. literalinclude:: /../../dbinit.py
 	   :language: sql
 	   :linenos:
@@ -57,7 +57,7 @@ B - Cities Table Create Statement
 --------------
 
 A - Fields of Users Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 	
 	===========	=========	=======================	===========	================
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -68,7 +68,7 @@ A - Fields of Users Table
 
 		
 B - Users Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	.. literalinclude:: /../../dbinit.py
 	   :language: sql
 	   :linenos:
