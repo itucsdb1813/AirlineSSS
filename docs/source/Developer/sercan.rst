@@ -5,7 +5,7 @@ Parts Implemented by Sercan Yetkin
 --------------
 
 A - Fields of Flights Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ==============	=========	=======================	===========	================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -20,7 +20,7 @@ arrival_time	TIMESTAMP	Arrival time
 
 	
 B - Flights Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
@@ -32,7 +32,7 @@ B - Flights Table Create Statement
 --------------
 
 A - Fields of Airports Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ============	=========	=======================	===========	================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -44,7 +44,7 @@ city_id		INTEGER		City id					Cities - city_id
 
 	
 B - Airports Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
@@ -56,7 +56,7 @@ B - Airports Table Create Statement
 --------------
 
 A - Fields of Planes Table
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ==============	=========	=======================	===========	================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
@@ -69,7 +69,7 @@ eco_capacity	INTEGER		Economy capacity
 
 	
 B - Planes Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
