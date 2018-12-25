@@ -7,16 +7,16 @@ Parts Implemented by Sercan Yetkin
 A - Fields of Flights Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
-==============	=========	=======================	===========	================
+==============	=========	=======================	===========	======================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
-==============	=========	=======================	===========	================
+==============	=========	=======================	===========	======================
 flight_id	INTEGER		Flight id		X		
 destination_id	INTEGER		Destination city			Airports - airport_id			
 departure_id	INTEGER		Departure city id			Airports - airport_id
 plane_id	INTEGER		Plane id 				Planes - plane_id		 		
 departure_time	TIMESTAMP	Departure time		 			
 arrival_time	TIMESTAMP	Arrival time			
-==============	=========  	=======================	===========	================
+==============	=========  	=======================	===========	======================
 
 	
 B - Flights Table Create Statement
@@ -34,13 +34,13 @@ B - Flights Table Create Statement
 A - Fields of Airports Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	
-============	=========	=======================	===========	================
+============	=========	=======================	===========	==================
 FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
-============	=========	=======================	===========	================
+============	=========	=======================	===========	==================
 airport_id	INTEGER		Airport id		X		
 airport_name	VARCHAR		Airport name						
 city_id		INTEGER		City id					Cities - city_id	
-============	=========  	=======================	===========	================
+============	=========  	=======================	===========	==================
 
 	
 B - Airports Table Create Statement
