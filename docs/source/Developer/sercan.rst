@@ -1,10 +1,10 @@
 Parts Implemented by Sercan Yetkin
 ==================================
 
-Flights Table
+*Flights Table*
 --------------
 
-Fields of Flights Table
+A - Fields of Flights Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ==============	=========	=======================	===========	================
@@ -19,7 +19,7 @@ arrival_time	TIMESTAMP	Arrival time
 ==============	=========  	=======================	===========	================
 
 	
-Flights Table Create Statement
+B - Flights Table Create Statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
@@ -28,10 +28,10 @@ Flights Table Create Statement
    :name: Flights
    :lines: 102-122
 
-Airports Table
+*Airports Table*
 --------------
 
-Fields of Airports Table
+A - Fields of Airports Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ============	=========	=======================	===========	================
@@ -43,7 +43,7 @@ city_id		INTEGER		City id					Cities
 ============	=========  	=======================	===========	================
 
 	
-Airports Table Create Statement
+B - Airports Table Create Statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
@@ -52,10 +52,10 @@ Airports Table Create Statement
    :name: Airports
    :lines: 89-99
 
-Planes Table
+*Planes Table*
 --------------
 
-Fields of Planes Table
+A - Fields of Planes Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
 	
 ==============	=========	=======================	===========	================
@@ -68,7 +68,7 @@ eco_capacity	INTEGER		Economy capacity
 ==============	=========  	=======================	===========	================
 
 	
-Planes Table Create Statement
+B - Planes Table Create Statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
