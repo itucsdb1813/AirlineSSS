@@ -10,7 +10,7 @@ A - Fields of Tickets Table
 	===========	=========	=======================	===========	================
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
 	===========	=========	=======================	===========	================
-	FLIGHT_ID	INTEGER		ID of flight		X		FLIGHTS
+	FLIGHT_ID	INTEGER		ID of flight		X		FLIGHTS - FLIGHT_ID
 	TICKET_ID	INTEGER		ID of ticket		X	
 	USERNAME	VARCHAR		Owner of the ticket			USERS
 	PRICE		NUMERIC		Price after discount		 			
