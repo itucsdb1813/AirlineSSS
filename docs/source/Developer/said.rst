@@ -35,7 +35,7 @@ B - Tickets Table Create Statement
 
 A - Fields of Cities Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
-	
+
 	===========	=========	=======================	===========	================
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
 	===========	=========	=======================	===========	================
