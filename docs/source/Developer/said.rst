@@ -1,54 +1,54 @@
 Parts Implemented by Muhammed Said Dikici
 =========================================
 
-Tickets Table
+*Tickets Table*
 --------------
 
-Fields of Tickets Table
+A - Fields of Tickets Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
 	
-===========	=========	=======================	===========	================
-FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
-===========	=========	=======================	===========	================
-FLIGHT_ID	INTEGER		ID of flight		X		FLIGHTS
-TICKET_ID	INTEGER		ID of ticket		X	
-USERNAME	VARCHAR		Owner of the ticket			USERS
-PRICE		NUMERIC		Price after discount		 			
-CLASS		CHARACTER	Economy-Business class		 			
-SEAT_NUMBER	INTEGER		Seat number of ticket			
-RATE		NUMERIC		1 - Discount rate				
-BASE_PRICE	NUMERIC		Price without discount	
-===========	=========  	=======================	===========	================
+	===========	=========	=======================	===========	================
+	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
+	===========	=========	=======================	===========	================
+	FLIGHT_ID	INTEGER		ID of flight		X		FLIGHTS
+	TICKET_ID	INTEGER		ID of ticket		X	
+	USERNAME	VARCHAR		Owner of the ticket			USERS
+	PRICE		NUMERIC		Price after discount		 			
+	CLASS		CHARACTER	Economy-Business class		 			
+	SEAT_NUMBER	INTEGER		Seat number of ticket			
+	RATE		NUMERIC		1 - Discount rate				
+	BASE_PRICE	NUMERIC		Price without discount	
+	===========	=========  	=======================	===========	================
 
-	
-TICKETS TABLE CREATE CODE
+		
+B - Tickets Table Create Statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-.. literalinclude:: /../../dbinit.py
-   :language: sql
-   :linenos:
-   :caption: Tickets Table
-   :name: Tickets
-   :lines: 126-146
+	.. literalinclude:: /../../dbinit.py
+	   :language: sql
+	   :linenos:
+	   :caption: Tickets Table
+	   :name: Tickets
+	   :lines: 126-146
 
-Cities Table
+*Cities Table*
 --------------
 
-Fields of Cities Table
+A - Fields of Cities Table
 ^^^^^^^^^^^^^^^^^^^^^^^^
 	
-===========	=========	=======================	===========	================
-FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
-===========	=========	=======================	===========	================
-CITY_ID	INTEGER		ID of city		X		
-CITY	INTEGER		City			
-===========	=========  	=======================	===========	================
+	===========	=========	=======================	===========	================
+	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
+	===========	=========	=======================	===========	================
+	CITY_ID	INTEGER		ID of city		X		
+	CITY	INTEGER		City			
+	===========	=========  	=======================	===========	================
 
 	
-Cities Table Create Statement
+B - Cities Table Create Statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. literalinclude:: /../../dbinit.py
-   :language: sql
-   :linenos:
-   :caption: Cities Table
-   :name: Cities
-   :lines: 75-78
+	.. literalinclude:: /../../dbinit.py
+	   :language: sql
+	   :linenos:
+	   :caption: Cities Table
+	   :name: Cities
+	   :lines: 75-78
