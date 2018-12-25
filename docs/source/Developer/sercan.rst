@@ -20,7 +20,7 @@ arrival_time	TIMESTAMP	Arrival time
 
 	
 Flights Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
@@ -44,7 +44,7 @@ city_id		INTEGER		City id					Cities
 
 	
 Airports Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
@@ -69,7 +69,7 @@ eco_capacity	INTEGER		Economy capacity
 
 	
 Planes Table Create Statement
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. literalinclude:: /../../dbinit.py
    :language: sql
    :linenos:
