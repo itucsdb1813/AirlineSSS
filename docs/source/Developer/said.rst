@@ -40,7 +40,7 @@ A - Fields of Cities Table
 	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
 	===========	=========	=======================	===========	================
 	CITY_ID	INTEGER		ID of city		X		
-	CITY	INTEGER		City			
+	CITY	VARCHAR		City			
 	===========	=========  	=======================	===========	================
 
 	
@@ -52,3 +52,26 @@ B - Cities Table Create Statement
 	   :caption: Cities Table
 	   :name: Cities
 	   :lines: 75-78
+
+*Users Table*
+--------------
+
+A - Fields of Users Table
+^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	===========	=========	=======================	===========	================
+	FIELD NAME	TYPE		DETAILS			PRIMARY KEY	FOREIGN KEY REF.
+	===========	=========	=======================	===========	================
+	USERNAME	VARCHAR		User's name		X		
+	PASSWORD	VARCHAR		User's password				
+	===========	=========  	=======================	===========	================
+
+		
+B - Users Table Create Statement
+^^^^^^^^^^^^^^^^^^^^^^^^^
+	.. literalinclude:: /../../dbinit.py
+	   :language: sql
+	   :linenos:
+	   :caption: Users Table
+	   :name: Users
+	   :lines: 10-14
