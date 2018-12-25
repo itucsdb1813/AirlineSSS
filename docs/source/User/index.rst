@@ -1,14 +1,17 @@
 User Guide
 ==========
 
-**to add a picture, use the following example**::
 
-   .. figure:: picture.png
-      :scale: 50 %
-      :alt: map to buried treasure
+.. figure:: /Images/picture.png
+  :scale: 75 %
+  :alt: Home Page
 
-      This is the caption of the figure (a simple paragraph).
+  Home Page
+  
+AirlineSSS
+==========
 
+  
 .. toctree::
 
    selim
