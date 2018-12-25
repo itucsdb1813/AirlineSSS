@@ -8,6 +8,12 @@ Database Design
 
 **include the E/R diagram(s)**
 
+.. toctree::
+
+   selim
+   sercan
+   said
+
 Code
 ----
 
@@ -21,9 +27,3 @@ Code
 
          def __init__(self, x):
             self.x = x
-
-.. toctree::
-
-   selim
-   sercan
-   said
