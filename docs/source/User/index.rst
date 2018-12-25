@@ -2,7 +2,7 @@ User Guide
 ==========
 
 
-.. figure:: /../Images/homepage.png
+.. figure:: Images/homepage.png
   :scale: 75 %
   :alt: Home Page
 
