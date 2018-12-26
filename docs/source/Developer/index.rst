@@ -13,7 +13,7 @@ Database Design
    selim
    sercan
    said
-   E/R diagrams
+   diagram
 
 Code
 ----
