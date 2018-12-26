@@ -32,7 +32,7 @@ Forgot Password
   Your password will be sent to your email address.
   
 Edit Profile
----------------
+------------
 
 .. figure:: ../../Images/useredit.png
   :scale: 100%
@@ -44,7 +44,7 @@ Edit Profile
   Enter the values you want to change.
   
 Buy Coins
----------------
+---------
 
 .. figure:: ../../Images/buycoins.png
   :scale: 100%
