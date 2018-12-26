@@ -1,6 +1,9 @@
 User Guide
 ==========
 
+**AirlineSSS**
+
+
 
 .. figure:: Images/homepage.png
   :scale: 75 %
@@ -8,8 +11,6 @@ User Guide
 
   Home Page
   
-AirlineSSS
-==========
 
   
 .. toctree::
