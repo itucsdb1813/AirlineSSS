@@ -3,19 +3,17 @@ User Guide
 
 **AirlineSSS**
 
+.. image:: Images/homepage.png
+  :width: 630px
+  :height: 330px
+  :alt: alternate text
+  :align: left
 
 
-.. figure:: Images/homepage.png
-  :scale: 75 %
-  :alt: Home Page
 
-  Home Page
-  
 
-  
 .. toctree::
 
-   selim
+   Selim/index
    sercan
    said
-   

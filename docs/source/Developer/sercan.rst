@@ -1,4 +1,4 @@
-Parts Implemented by Sercan Yetkin
+Tables Implemented by Sercan Yetkin
 ==================================
 
 *Flights Table*
