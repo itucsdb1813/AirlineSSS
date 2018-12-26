@@ -1,5 +1,5 @@
-Parts Implemented by Muhammed Said Dikici
-=========================================
+Tables Implemented by Muhammed Said Dikici
+==========================================
 
 *Tickets Table*
 --------------
