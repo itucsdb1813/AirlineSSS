@@ -1,12 +1,12 @@
 User Guide
 ==========
 
+.. image:: Images/homepage.png
+  :width: 200px
+  :height: 100px
+  :alt: alternate text
+  :align: right
 
-.. figure:: Images/homepage.png
-  :scale: 75 %
-  :alt: Home Page
-
-  Home Page
   
 AirlineSSS
 ==========
