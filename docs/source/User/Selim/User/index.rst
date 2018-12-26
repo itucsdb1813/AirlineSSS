@@ -4,7 +4,7 @@ User Documentation Implemented by Selim Enes Kılıçaslan
 Register
 --------
 
-.. figure:: Images/Register.png
+.. figure:: ../../Images/Register.png
   :scale: 100%
   :alt: Register Form
   :align: center
