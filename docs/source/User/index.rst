@@ -7,7 +7,7 @@ User Guide
   :width: 630px
   :height: 330px
   :alt: alternate text
-  :align: left
+  :align: top
 
 
 
