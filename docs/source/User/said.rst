@@ -36,7 +36,7 @@ After selecting flight user can buy his/her ticket after selecting class(economy
 
 Bought Notification
 -------------------
-.. image:: Images/ticket_bought.png
+.. image:: Images/bought_ticket.png
   :scale: 100 %
   :width: 750px
   :height: 450px
