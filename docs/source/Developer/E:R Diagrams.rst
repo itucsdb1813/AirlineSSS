@@ -1,16 +1,22 @@
 E/R Diagrams
 ============
 
-.. figure:: Images/er3.png
+.. image:: images/er3.png
   :scale: 75 %
+  :width: 200px
+  :height: 100px
   :alt: Users-Person-Payments 
 
 
-.. figure:: Images/er2.png
+.. image:: images/er2.png
   :scale: 75 %
+  :width: 200px
+  :height: 100px
   :alt: Users-Uploads-Posts
 
 
-.. figure:: Images/er1.png
+.. image:: images/er1.png
   :scale: 75 %
+  :width: 200px
+  :height: 100px
   :alt: Users-Tickets-Flights-Planes-Airport-Cities
