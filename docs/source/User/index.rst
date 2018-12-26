@@ -2,10 +2,10 @@ User Guide
 ==========
 
 .. image:: Images/homepage.png
-  :width: 200px
-  :height: 100px
+  :width: 630px
+  :height: 330px
   :alt: alternate text
-  :align: right
+  :align: left
 
   
 AirlineSSS
