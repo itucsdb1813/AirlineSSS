@@ -1,6 +1,16 @@
 Codes Implemented by Sercan Yetkin
 ==================================
 
+Home Page
+---------
+Show flight search, discounted flights and news on the main page.
+
+.. literalinclude:: /../../server.py
+   :language: python
+   :linenos:
+   :lines: 20-63
+   
+
 Add Plane
 ---------
 Get required arguments from admin and add them into planes table.
