@@ -14,6 +14,7 @@ Get required arguments from admin and add them into planes table.
 Add Airport
 -----------
 Get required arguments from admin and add them into airports table.
+
 .. literalinclude:: /../../server.py
    :language: python
    :linenos:
