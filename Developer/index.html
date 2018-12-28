@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Guide &mdash; ITUCSDB1813 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tables Implemented by Selim Enes Kılıçaslan" href="selim.html" />
+    <link rel="prev" title="Parts Implemented by Muhammed Said Dikici" href="../User/said.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1813
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../User/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#database-design">Database Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim.html">Tables Implemented by Selim Enes Kılıçaslan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html">Tables Implemented by Sercan Yetkin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said.html">Tables Implemented by Muhammed Said Dikici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diagram.html">E/R Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim_code.html">Codes Implemented by Selim Enes Kılıçaslan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan_code.html">Codes Implemented by Sercan Yetkin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said_code.html">Codes Implemented by Muhammed Said Dikici</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1813</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Developer Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Developer/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="database-design">
+<h2>Database Design<a class="headerlink" href="#database-design" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="selim.html">Tables Implemented by Selim Enes Kılıçaslan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selim.html#person-table"><em>Person Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#a-fields-of-person-table">A - Fields of Person Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#b-person-table-create-statement">B - Person Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selim.html#payments-table"><em>Payments Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#a-fields-of-payments-table">A - Fields of Payments Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#b-payments-table-create-statement">B - Payments Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selim.html#posts-table"><em>Posts Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#a-fields-of-posts-table">A - Fields of Posts Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#b-posts-table-create-statement">B - Posts Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selim.html#uploads-table"><em>Uploads Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#id1">A - Fields of Posts Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selim.html#id2">B - Posts Table Create Statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sercan.html">Tables Implemented by Sercan Yetkin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sercan.html#flights-table"><em>Flights Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#a-fields-of-flights-table">A - Fields of Flights Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#b-flights-table-create-statement">B - Flights Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sercan.html#airports-table"><em>Airports Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#a-fields-of-airports-table">A - Fields of Airports Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#b-airports-table-create-statement">B - Airports Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sercan.html#planes-table"><em>Planes Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#a-fields-of-planes-table">A - Fields of Planes Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html#b-planes-table-create-statement">B - Planes Table Create Statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="said.html">Tables Implemented by Muhammed Said Dikici</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="said.html#tickets-table"><em>Tickets Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="said.html#a-fields-of-tickets-table">A - Fields of Tickets Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said.html#b-tickets-table-create-statement">B - Tickets Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="said.html#cities-table"><em>Cities Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="said.html#a-fields-of-cities-table">A - Fields of Cities Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said.html#b-cities-table-create-statement">B - Cities Table Create Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="said.html#users-table"><em>Users Table</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="said.html#a-fields-of-users-table">A - Fields of Users Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said.html#b-users-table-create-statement">B - Users Table Create Statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagram.html">E/R Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagram.html#users-person-payments-diagrams">Users-Person-Payments Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagram.html#users-uploads-posts-diagrams">Users-Uploads-Posts Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagram.html#users-tickets-flights-planes-airport-cities-diagrams">Users-Tickets-Flights-Planes-Airport-Cities Diagrams</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="selim_code.html">Codes Implemented by Selim Enes Kılıçaslan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#login">Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#register">Register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#logout">Logout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#buy-coins">Buy Coins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#edit-user">Edit User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#forgot-password">Forgot Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#render-template">Render Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#error-page">Error Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#about-page">About Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#news-page">News Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#admin-check">Admin Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#refresh-user-data">Refresh User Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#send-post">Send Post</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#payment-requests">Payment Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#delete-user">Delete User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#admin-page">Admin Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#user-list">User List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#user-data">User Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#id1">Edit User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selim_code.html#fabrika-ayarlarina-don">Fabrika Ayarlarına DÖN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sercan_code.html">Codes Implemented by Sercan Yetkin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#home-page">Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#add-plane">Add Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#add-airport">Add Airport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#add-flights">Add Flights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#list-all-flights">List All Flights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#delete-flights">Delete Flights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#set-discount-for-a-flight">Set discount for a flight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#search-oneway-flight">Search oneway flight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sercan_code.html#search-roundtrip-flight">Search roundtrip flight</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="said_code.html">Codes Implemented by Muhammed Said Dikici</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="said_code.html#add-city">Add City</a></li>
+<li class="toctree-l2"><a class="reference internal" href="said_code.html#buy-ticket">Buy Ticket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="said_code.html#create-tickets">Create Tickets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="said_code.html#view-tickets">View Tickets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="said_code.html#check-in">Check-in</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selim.html" class="btn btn-neutral float-right" title="Tables Implemented by Selim Enes Kılıçaslan" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../User/said.html" class="btn btn-neutral" title="Parts Implemented by Muhammed Said Dikici" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1813
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

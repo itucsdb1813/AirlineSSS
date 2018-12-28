@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tables Implemented by Sercan Yetkin &mdash; ITUCSDB1813 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tables Implemented by Muhammed Said Dikici" href="said.html" />
+    <link rel="prev" title="Tables Implemented by Selim Enes Kılıçaslan" href="selim.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1813
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../User/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#database-design">Database Design</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="selim.html">Tables Implemented by Selim Enes Kılıçaslan</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tables Implemented by Sercan Yetkin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flights-table"><em>Flights Table</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#airports-table"><em>Airports Table</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#planes-table"><em>Planes Table</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="said.html">Tables Implemented by Muhammed Said Dikici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diagram.html">E/R Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1813</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Tables Implemented by Sercan Yetkin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Developer/sercan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tables-implemented-by-sercan-yetkin">
+<h1>Tables Implemented by Sercan Yetkin<a class="headerlink" href="#tables-implemented-by-sercan-yetkin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="flights-table">
+<h2><em>Flights Table</em><a class="headerlink" href="#flights-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-flights-table">
+<h3>A - Fields of Flights Table<a class="headerlink" href="#a-fields-of-flights-table" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="29%" />
+<col width="14%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>flight_id</td>
+<td>INTEGER</td>
+<td>Flight id</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>destination_id</td>
+<td>INTEGER</td>
+<td>Destination city</td>
+<td>&#160;</td>
+<td>Airports - airport_id</td>
+</tr>
+<tr class="row-even"><td>departure_id</td>
+<td>INTEGER</td>
+<td>Departure city id</td>
+<td>&#160;</td>
+<td>Airports - airport_id</td>
+</tr>
+<tr class="row-odd"><td>plane_id</td>
+<td>INTEGER</td>
+<td>Plane id</td>
+<td>&#160;</td>
+<td>Planes - plane_id</td>
+</tr>
+<tr class="row-even"><td>departure_time</td>
+<td>TIMESTAMP</td>
+<td>Departure time</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>arrival_time</td>
+<td>TIMESTAMP</td>
+<td>Arrival time</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b-flights-table-create-statement">
+<h3>B - Flights Table Create Statement<a class="headerlink" href="#b-flights-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="flights">
+<div class="code-block-caption"><span class="caption-text">Flights Table</span><a class="headerlink" href="#flights" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights</span>
+            <span class="p">(</span>   <span class="n">flight_id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                <span class="n">destination_id</span>  <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">departure_id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">plane_id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">departure_time</span> <span class="k">timestamp</span> <span class="k">without</span> <span class="n">time</span> <span class="k">zone</span><span class="p">,</span>
+                <span class="n">arrival_time</span> <span class="k">timestamp</span> <span class="k">without</span> <span class="n">time</span> <span class="k">zone</span><span class="p">,</span>
+
+                <span class="k">CONSTRAINT</span> <span class="n">flights_fkey</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">plane_id</span><span class="p">)</span>
+                    <span class="k">REFERENCES</span> <span class="n">planes</span> <span class="p">(</span><span class="n">plane_id</span><span class="p">)</span>
+                    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span><span class="p">,</span>
+                <span class="k">CONSTRAINT</span> <span class="n">flights_fkey2</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">destination_id</span><span class="p">)</span>
+                    <span class="k">REFERENCES</span> <span class="n">airports</span> <span class="p">(</span><span class="n">airport_id</span><span class="p">)</span>
+                    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span><span class="p">,</span>
+                <span class="k">CONSTRAINT</span> <span class="n">departure_fkey</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">departure_id</span><span class="p">)</span>
+                    <span class="k">REFERENCES</span> <span class="n">airports</span> <span class="p">(</span><span class="n">airport_id</span><span class="p">)</span>
+                    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span>
+            <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="airports-table">
+<h2><em>Airports Table</em><a class="headerlink" href="#airports-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-airports-table">
+<h3>A - Fields of Airports Table<a class="headerlink" href="#a-fields-of-airports-table" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="32%" />
+<col width="15%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>airport_id</td>
+<td>INTEGER</td>
+<td>Airport id</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>airport_name</td>
+<td>VARCHAR</td>
+<td>Airport name</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>city_id</td>
+<td>INTEGER</td>
+<td>City id</td>
+<td>&#160;</td>
+<td>Cities - city_id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b-airports-table-create-statement">
+<h3>B - Airports Table Create Statement<a class="headerlink" href="#b-airports-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="airports">
+<div class="code-block-caption"><span class="caption-text">Airports Table</span><a class="headerlink" href="#airports" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">airports</span>
+             <span class="p">(</span>   <span class="n">airport_id</span> <span class="nb">integer</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                 <span class="n">airport_name</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                 <span class="n">city_id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+
+                 <span class="k">CONSTRAINT</span> <span class="n">airports_fkey</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">city_id</span><span class="p">)</span>
+                    <span class="k">REFERENCES</span> <span class="n">cities</span> <span class="p">(</span><span class="n">city_id</span><span class="p">)</span>
+                    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span>
+
+             <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="planes-table">
+<h2><em>Planes Table</em><a class="headerlink" href="#planes-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-planes-table">
+<h3>A - Fields of Planes Table<a class="headerlink" href="#a-fields-of-planes-table" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="32%" />
+<col width="15%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>plane_id</td>
+<td>INTEGER</td>
+<td>Plane id</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>plane_model</td>
+<td>VARCHAR</td>
+<td>Plane model</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>bsn_capacity</td>
+<td>INTEGER</td>
+<td>Busines capacity</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>eco_capacity</td>
+<td>INTEGER</td>
+<td>Economy capacity</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b-planes-table-create-statement">
+<h3>B - Planes Table Create Statement<a class="headerlink" href="#b-planes-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="planes">
+<div class="code-block-caption"><span class="caption-text">Planes Table</span><a class="headerlink" href="#planes" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">planes</span>
+             <span class="p">(</span>   <span class="n">plane_id</span> <span class="nb">integer</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                <span class="n">plane_model</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">bsn_capacity</span> <span class="nb">integer</span><span class="p">,</span>
+                <span class="n">eco_capacity</span> <span class="nb">integer</span>
+            <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="said.html" class="btn btn-neutral float-right" title="Tables Implemented by Muhammed Said Dikici" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selim.html" class="btn btn-neutral" title="Tables Implemented by Selim Enes Kılıçaslan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1813
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

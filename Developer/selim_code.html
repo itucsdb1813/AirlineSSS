@@ -1,0 +1,1216 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Codes Implemented by Selim Enes Kılıçaslan &mdash; ITUCSDB1813 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Codes Implemented by Sercan Yetkin" href="sercan_code.html" />
+    <link rel="prev" title="E/R Diagrams" href="diagram.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1813
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../User/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#database-design">Database Design</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#code">Code</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Codes Implemented by Selim Enes Kılıçaslan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#login">Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#register">Register</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logout">Logout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buy-coins">Buy Coins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-user">Edit User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#forgot-password">Forgot Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-template">Render Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#error-page">Error Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#about-page">About Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#news-page">News Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admin-check">Admin Check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#refresh-user-data">Refresh User Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-post">Send Post</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#payment-requests">Payment Requests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-user">Delete User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admin-page">Admin Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-list">User List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-data">User Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Edit User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fabrika-ayarlarina-don">Fabrika Ayarlarına DÖN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sercan_code.html">Codes Implemented by Sercan Yetkin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="said_code.html">Codes Implemented by Muhammed Said Dikici</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1813</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Codes Implemented by Selim Enes Kılıçaslan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Developer/selim_code.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="codes-implemented-by-selim-enes-kilicaslan">
+<h1>Codes Implemented by Selim Enes Kılıçaslan<a class="headerlink" href="#codes-implemented-by-selim-enes-kilicaslan" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="login">
+<h2>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/login&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">_Username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+    <span class="n">_Password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM users WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">        &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">_Username</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="n">_Password</span><span class="p">:</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;online&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_Username</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM person WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">_Username</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Fullname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Role&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Balance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+                    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;adminpage&#39;</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;userpage&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Wrong username or password!&#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="register">
+<h2>Register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/register&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">formRegister</span><span class="p">()</span>
+    <span class="n">_Username</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">_Password</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">_Fullname</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">_Email</span>    <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">data</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM users WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">        &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">_Username</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;This username already exists!&#39;</span><span class="p">))</span>
+
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO users (username, password) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">_Username</span><span class="p">,</span> <span class="n">_Password</span><span class="p">))</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO person (username, fullname, emailaddress, userrole) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">_Username</span><span class="p">,</span> <span class="n">_Fullname</span><span class="p">,</span> <span class="n">_Email</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">))</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;online&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_Username</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Fullname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_Fullname</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_Email</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Balance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;You have been succesfully registered.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;userpage&#39;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
+        <span class="n">flash</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">error</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="logout">
+<h2>Logout<a class="headerlink" href="#logout" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/logout&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;online&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">session</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;You need to log in first!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="buy-coins">
+<h2>Buy Coins<a class="headerlink" href="#buy-coins" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#Enes</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/buycoins&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">buycoins</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;buycoins.html&#39;</span><span class="p">,</span> <span class="n">coinActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;amount&#39;</span><span class="p">]</span>
+        <span class="n">refreshUserData</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO payments(username, amount) VALUES(</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">],</span> <span class="n">amount</span><span class="p">))</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Payment request has been sent to admins.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;userpage&#39;</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="edit-user">
+<h2>Edit User<a class="headerlink" href="#edit-user" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/edituser&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">edituser</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">refreshUserData</span><span class="p">():</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">formEditUser</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;edituser.html&#39;</span><span class="p">,</span> <span class="n">form</span> <span class="o">=</span> <span class="n">form</span><span class="p">,</span> <span class="n">fullname</span><span class="o">=</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;Fullname&#39;</span><span class="p">],</span> <span class="n">email</span><span class="o">=</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;Email&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+                <span class="n">newFullname</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">fullname</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">newEmail</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">newPassword</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">newFullname</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                        <span class="n">newFullname</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Fullname&#39;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">newEmail</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                        <span class="n">newEmail</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Email&#39;</span><span class="p">]</span>
+
+                    <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+                    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                        UPDATE person SET fullname = </span><span class="si">%s</span><span class="s2">, emailaddress = </span><span class="si">%s</span><span class="s2"> WHERE username = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">                    &quot;&quot;&quot;</span>
+                    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">newFullname</span><span class="p">,</span> <span class="n">newEmail</span><span class="p">,</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]))</span>
+                    <span class="k">if</span> <span class="n">newPassword</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                            UPDATE users SET password = </span><span class="si">%s</span><span class="s2"> WHERE username = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">                        &quot;&quot;&quot;</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">newPassword</span><span class="p">,</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]))</span>
+                    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                    <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;You have successfully updated your profile&#39;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;userpage&#39;</span><span class="p">))</span>
+                <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;error_page&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+                <span class="k">finally</span><span class="p">:</span>
+                    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="forgot-password">
+<h2>Forgot Password<a class="headerlink" href="#forgot-password" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/forgotpassword&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">forgotpassword</span><span class="p">():</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">formForgotPass</span><span class="p">()</span>
+    <span class="n">refreshUserData</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s1">&#39;Username&#39;</span> <span class="ow">in</span> <span class="n">session</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">),</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Not allowed!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;forgotpassword.html&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+            <span class="n">username</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">refreshUserData</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT p.emailaddress, u.password FROM person AS p</span>
+<span class="s2">                                    INNER JOIN users AS u ON u.username = p.username</span>
+<span class="s2">                                    WHERE p.username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">row</span><span class="p">:</span>
+                    <span class="n">mailsender</span><span class="o">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Your password has been sent to your email address. Please check your inbox.&#39;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;forgotpassword.html&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;This username is not registered to our website!&#39;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;forgotpassword.html&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
+            <span class="n">flash</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">error</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;forgotpassword.html&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="render-template">
+<h2>Render Template<a class="headerlink" href="#render-template" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RenderTemplate</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="o">**</span><span class="n">context</span><span class="p">):</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;registerForm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">formRegister</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="o">**</span><span class="n">context</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="error-page">
+<h2>Error Page<a class="headerlink" href="#error-page" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/errorpage/&lt;message&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">errorpage</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;errorpage.html&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="about-page">
+<h2>About Page<a class="headerlink" href="#about-page" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/about&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">about</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;about.html&#39;</span><span class="p">,</span> <span class="n">aboutActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="news-page">
+<h2>News Page<a class="headerlink" href="#news-page" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/news&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">news</span><span class="p">():</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT p.postid, f.fullname, p.content, p.date, p.time, f.userrole, p.title, img.filename, img.data FROM posts as p</span>
+<span class="s2">                LEFT OUTER JOIN person as f ON f.username = p.poster</span>
+<span class="s2">                LEFT OUTER JOIN uploads as img ON p.image = img.id</span>
+<span class="s2">                ORDER BY p.postid DESC</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+        <span class="n">images</span><span class="p">[</span><span class="n">post</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">b64encode</span><span class="p">(</span><span class="n">post</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;news.html&#39;</span><span class="p">,</span> <span class="n">posts</span> <span class="o">=</span> <span class="n">posts</span><span class="p">,</span> <span class="n">newsActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="admin-check">
+<h2>Admin Check<a class="headerlink" href="#admin-check" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ifAdmin</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;Username&#39;</span> <span class="ow">in</span> <span class="n">session</span><span class="p">:</span>
+        <span class="n">_Refreshed</span> <span class="o">=</span> <span class="n">refreshUserData</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">_Refreshed</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Role&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_Refreshed</span>
+    <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="refresh-user-data">
+<h2>Refresh User Data<a class="headerlink" href="#refresh-user-data" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">refreshUserData</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;Username&#39;</span> <span class="ow">in</span> <span class="n">session</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM person WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+            <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Fullname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Role&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Balance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">e</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="send-post">
+<h2>Send Post<a class="headerlink" href="#send-post" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_sendpost&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">adm_sendpost</span><span class="p">():</span>
+    <span class="n">refreshUserData</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">formSendPost</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">secure_filename</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO uploads (filename, data) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">                            &quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">read</span><span class="p">())))</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT MAX(id) FROM uploads</span>
+<span class="s2">                            &quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">read</span><span class="p">())))</span>
+                <span class="nb">id</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+                <span class="n">_Datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+                <span class="n">poster</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">date</span> <span class="o">=</span> <span class="n">_Datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y&quot;</span><span class="p">)</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="n">_Datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M&quot;</span><span class="p">)</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO posts (poster, content, date, time, title, image) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, TO_DATE(</span><span class="si">%s</span><span class="s2">, &#39;DD/MM/YYYY&#39;), </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">                            &quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="n">poster</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;You have succesfully posted an entry.&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;news&#39;</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
+                <span class="n">flash</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_sendpost.html&#39;</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Not Authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="payment-requests">
+<h2>Payment Requests<a class="headerlink" href="#payment-requests" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_pymreqs&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">adm_pymreqs</span><span class="p">():</span>
+    <span class="n">refreshUserData</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT paymentid, username, amount FROM payments WHERE approved = &#39;0&#39;</span>
+<span class="s2">                                ORDER BY paymentid ASC</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">payments</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_pymreqs.html&#39;</span><span class="p">,</span> <span class="n">payments</span> <span class="o">=</span> <span class="n">payments</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="k">return</span> <span class="s2">&quot;Hata!&quot;</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_pymreqs.html&#39;</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="n">pymId</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+                    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+
+                        <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+                        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE payments SET approved = </span><span class="si">%s</span><span class="s2">, approved_by = </span><span class="si">%s</span><span class="s2"> WHERE paymentid = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">                        &quot;&quot;&quot;</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">],</span> <span class="n">pymId</span><span class="p">))</span>
+
+                        <span class="c1">##statement = &quot;&quot;&quot;SELECT amount FROM payments WHERE paymentid = %s</span>
+                        <span class="c1">##&quot;&quot;&quot;</span>
+                        <span class="c1">##cursor.execute(statement, (pymId))</span>
+                        <span class="c1">##amount = cursor.fetchone()</span>
+
+                        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE person</span>
+<span class="s2">                                        SET balance = t1.balance + t2.amount</span>
+<span class="s2">                                        FROM person as t1</span>
+<span class="s2">                                        INNER JOIN payments as t2 ON t2.username = t1.username</span>
+<span class="s2">                                        WHERE t2.paymentid = </span><span class="si">%s</span><span class="s2"></span>
+<span class="s2">                                          AND person.username = t2.username;</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">pymId</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Approved requests&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;adm_pymreqs&#39;</span><span class="p">))</span>
+            <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="delete-user">
+<h2>Delete User<a class="headerlink" href="#delete-user" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/deleteuser/&lt;username&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">deleteuser</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;DELETE FROM users WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;DELETE FROM person WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;You have succesfully deleted a user.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_users.html&#39;</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="s2">&quot;Hata!&quot;</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Not Authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="admin-page">
+<h2>Admin Page<a class="headerlink" href="#admin-page" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adminpage&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">adminpage</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adminpage.html&#39;</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;You are not authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="user-list">
+<h2>User List<a class="headerlink" href="#user-list" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_users&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">adm_users</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">username</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">]</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM person WHERE username &lt;&gt; &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_users.html&#39;</span><span class="p">,</span> <span class="n">userlist</span> <span class="o">=</span> <span class="n">rows</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">e</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;You are not authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="user-data">
+<h2>User Data<a class="headerlink" href="#user-data" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_updateuser/&lt;username&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">updateuser</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM person WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">RenderTemplate</span><span class="p">(</span><span class="s1">&#39;adm_updateuser.html&#39;</span><span class="p">,</span> <span class="n">user</span> <span class="o">=</span> <span class="n">row</span><span class="p">,</span> <span class="n">adminActive</span><span class="o">=</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">e</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;You are not authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id1">
+<h2>Edit User<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_users/&lt;username&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">adm_updateuser</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">form_dict</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE person SET</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+            <span class="n">set_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">if</span> <span class="s1">&#39;fname_cb&#39;</span> <span class="ow">in</span> <span class="n">form_dict</span> <span class="ow">and</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;fname_cb&#39;</span><span class="p">]:</span>
+                <span class="n">set_text</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;fullname = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;fullname&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span>
+            <span class="k">if</span> <span class="s1">&#39;mail_cb&#39;</span> <span class="ow">in</span> <span class="n">form_dict</span> <span class="ow">and</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;mail_cb&#39;</span><span class="p">]:</span>
+                <span class="n">set_text</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;emailaddress = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;mail&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span>
+            <span class="k">if</span> <span class="s1">&#39;role_cb&#39;</span> <span class="ow">in</span> <span class="n">form_dict</span> <span class="ow">and</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;role_cb&#39;</span><span class="p">]:</span>
+                <span class="n">set_text</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;userrole = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;role&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span>
+            <span class="k">if</span> <span class="s1">&#39;balance_cb&#39;</span> <span class="ow">in</span> <span class="n">form_dict</span> <span class="ow">and</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;balance_cb&#39;</span><span class="p">]:</span>
+                <span class="n">set_text</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;balance = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">form_dict</span><span class="p">[</span><span class="s1">&#39;balance&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">set_text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">set_text</span> <span class="o">=</span> <span class="n">set_text</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">statement</span> <span class="o">+=</span> <span class="n">set_text</span>
+                <span class="n">statement</span> <span class="o">+=</span> <span class="s2">&quot; WHERE username = &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">username</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;adm_users&#39;</span><span class="p">))</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;You have succesfully updated a user.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;adm_users&#39;</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">e</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;You are not authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="fabrika-ayarlarina-don">
+<h2>Fabrika Ayarlarına DÖN<a class="headerlink" href="#fabrika-ayarlarina-don" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/adm_fabrika_ayarlari&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">adm_fabrika_ayarlari</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">ifAdmin</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">DROP_STATEMENTS</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;&quot;&quot;DROP TABLE tickets&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE flights&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE airports&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE cities&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE planes&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE posts&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE payments&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE person&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE uploads&quot;&quot;&quot;</span>
+            <span class="p">,</span> <span class="s2">&quot;&quot;&quot;DROP TABLE users&quot;&quot;&quot;</span> <span class="p">]</span>
+            <span class="k">for</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">DROP_STATEMENTS</span><span class="p">:</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">INIT_STATEMENTS</span><span class="p">:</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;adminpage&#39;</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;errorpage&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;Not Authorized!&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sercan_code.html" class="btn btn-neutral float-right" title="Codes Implemented by Sercan Yetkin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="diagram.html" class="btn btn-neutral" title="E/R Diagrams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1813
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

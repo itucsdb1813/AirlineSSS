@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tables Implemented by Muhammed Said Dikici &mdash; ITUCSDB1813 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="E/R Diagrams" href="diagram.html" />
+    <link rel="prev" title="Tables Implemented by Sercan Yetkin" href="sercan.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1813
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../User/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#database-design">Database Design</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="selim.html">Tables Implemented by Selim Enes Kılıçaslan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sercan.html">Tables Implemented by Sercan Yetkin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tables Implemented by Muhammed Said Dikici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tickets-table"><em>Tickets Table</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cities-table"><em>Cities Table</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#users-table"><em>Users Table</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="diagram.html">E/R Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1813</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Tables Implemented by Muhammed Said Dikici</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Developer/said.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tables-implemented-by-muhammed-said-dikici">
+<h1>Tables Implemented by Muhammed Said Dikici<a class="headerlink" href="#tables-implemented-by-muhammed-said-dikici" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tickets-table">
+<h2><em>Tickets Table</em><a class="headerlink" href="#tickets-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-tickets-table">
+<h3>A - Fields of Tickets Table<a class="headerlink" href="#a-fields-of-tickets-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="12%" />
+<col width="32%" />
+<col width="15%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FLIGHT_ID</td>
+<td>INTEGER</td>
+<td>ID of flight</td>
+<td>X</td>
+<td>FLIGHTS - FLIGHT_ID</td>
+</tr>
+<tr class="row-odd"><td>TICKET_ID</td>
+<td>INTEGER</td>
+<td>ID of ticket</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>USERNAME</td>
+<td>VARCHAR</td>
+<td>Owner of the ticket</td>
+<td>&#160;</td>
+<td>USERS - USERNAME</td>
+</tr>
+<tr class="row-odd"><td>PRICE</td>
+<td>NUMERIC</td>
+<td>Price after discount</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>CLASS</td>
+<td>CHARACTER</td>
+<td>Economy-Business class</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>SEAT_NUMBER</td>
+<td>INTEGER</td>
+<td>Seat number of ticket</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>RATE</td>
+<td>NUMERIC</td>
+<td>1 - Discount rate</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>BASE_PRICE</td>
+<td>NUMERIC</td>
+<td>Price without discount</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="b-tickets-table-create-statement">
+<h3>B - Tickets Table Create Statement<a class="headerlink" href="#b-tickets-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="tickets">
+<div class="code-block-caption"><span class="caption-text">Tickets Table</span><a class="headerlink" href="#tickets" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">tickets</span>
+            <span class="p">(</span>   
+                <span class="n">flight_id</span> <span class="nb">integer</span><span class="p">,</span>
+                <span class="n">ticket_id</span> <span class="nb">integer</span><span class="p">,</span>
+                <span class="n">username</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+                <span class="n">price</span> <span class="nb">numeric</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="k">class</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">seat_number</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+                <span class="n">rate</span> <span class="nb">numeric</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="n">base_price</span> <span class="nb">numeric</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="k">CONSTRAINT</span> <span class="n">tickets_pkey</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">flight_id</span><span class="p">,</span> <span class="n">ticket_id</span><span class="p">),</span>
+
+                <span class="k">CONSTRAINT</span> <span class="n">flight_id</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">flight_id</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">flights</span> <span class="p">(</span><span class="n">flight_id</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+            <span class="k">CONSTRAINT</span> <span class="n">username</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">username</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">person</span> <span class="p">(</span><span class="n">username</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+            <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="cities-table">
+<h2><em>Cities Table</em><a class="headerlink" href="#cities-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-cities-table">
+<h3>A - Fields of Cities Table<a class="headerlink" href="#a-fields-of-cities-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="13%" />
+<col width="33%" />
+<col width="16%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CITY_ID</td>
+<td>INTEGER</td>
+<td>ID of city</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>CITY</td>
+<td>VARCHAR</td>
+<td>City</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="b-cities-table-create-statement">
+<h3>B - Cities Table Create Statement<a class="headerlink" href="#b-cities-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="cities">
+<div class="code-block-caption"><span class="caption-text">Cities Table</span><a class="headerlink" href="#cities" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">cities</span>
+                <span class="p">(</span>   <span class="n">city_id</span> <span class="nb">integer</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                    <span class="n">city</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+                <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="users-table">
+<h2><em>Users Table</em><a class="headerlink" href="#users-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-fields-of-users-table">
+<h3>A - Fields of Users Table<a class="headerlink" href="#a-fields-of-users-table" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="13%" />
+<col width="33%" />
+<col width="16%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">FIELD NAME</th>
+<th class="head">TYPE</th>
+<th class="head">DETAILS</th>
+<th class="head">PRIMARY KEY</th>
+<th class="head">FOREIGN KEY REF.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>USERNAME</td>
+<td>VARCHAR</td>
+<td>User’s name</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PASSWORD</td>
+<td>VARCHAR</td>
+<td>User’s password</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="b-users-table-create-statement">
+<h3>B - Users Table Create Statement<a class="headerlink" href="#b-users-table-create-statement" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="users">
+<div class="code-block-caption"><span class="caption-text">Users Table</span><a class="headerlink" href="#users" title="Permalink to this code">¶</a></div>
+<div class="highlight-sql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">users</span>
+            <span class="p">(</span>
+                <span class="n">username</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                <span class="n">password</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+            <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="diagram.html" class="btn btn-neutral float-right" title="E/R Diagrams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sercan.html" class="btn btn-neutral" title="Tables Implemented by Sercan Yetkin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1813
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
