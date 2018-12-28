@@ -23,7 +23,7 @@ Allows user to buy tickets. Selects tickets that username is null from tickets t
    
 Create Tickets
 --------------
-When a flight is added, auotomatically creates tickets and inserts to tickets table.
+When a flight is added, automatically creates tickets and inserts to tickets table.
 
 .. literalinclude:: /../../server.py
    :language: python
